@@ -50,7 +50,7 @@ describe('API de tareas', () => {
 
   test('DELETE de una tarea inexistente devuelve 404', async () => {
     const r = await request(app).delete('/api/tareas/99');
-    expect(r.status).toBe(200);
+    expect(r.status).toBe(404);
   });
 
   test('POST con título de más de 100 caracteres devuelve 400', async () => {
